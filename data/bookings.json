@@ -1,0 +1,16 @@
+[
+  {
+    "id": "f11a2fa7-7d8d-48a2-acd5-b3c185fd319a",
+    "property_id": "3dc43563-def2-49e5-8262-2d6bf24263ac",
+    "user_id": "64a1aed6-3216-4c71-92ba-185d95936bd5",
+    "check_in_date": "2025-05-31T00:13:08.189617",
+    "check_out_date": "2025-06-05T00:13:08.189620",
+    "num_guests": 2,
+    "total_price": 1690,
+    "status": "confirmed",
+    "confirmation_code": "BKF03A217D",
+    "special_requests": "Late check-in, around 7 PM",
+    "created_at": "2025-05-01T00:13:08.189630",
+    "updated_at": "2025-05-01T00:13:08.189632"
+  }
+]

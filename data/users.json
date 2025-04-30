@@ -1,0 +1,40 @@
+[
+  {
+    "id": "64a1aed6-3216-4c71-92ba-185d95936bd5",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone_number": "+1234567890",
+    "preferences": {
+      "preferred_locations": [
+        "Malibu",
+        "Miami Beach"
+      ],
+      "preferred_amenities": [
+        "Pool",
+        "Wifi",
+        "Kitchen"
+      ]
+    },
+    "created_at": "2025-05-01T00:13:08.189595",
+    "updated_at": "2025-05-01T00:13:08.189597"
+  },
+  {
+    "id": "30920e24-a002-46e7-b261-9fff3b02b0de",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone_number": "+1987654321",
+    "preferences": {
+      "preferred_locations": [
+        "Aspen",
+        "Bali"
+      ],
+      "preferred_amenities": [
+        "Hot tub",
+        "Wifi",
+        "Air conditioning"
+      ]
+    },
+    "created_at": "2025-05-01T00:13:08.189607",
+    "updated_at": "2025-05-01T00:13:08.189608"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "dfb53222-7ba3-4f07-a720-0f53c733ed18",
+    "user_id": "64a1aed6-3216-4c71-92ba-185d95936bd5",
+    "session_id": "46c71252-9a21-4a0c-8dc2-b33f9b5a212a",
+    "call_sid": "CA69475699cef04d33bc3e",
+    "conversation": [
+      {
+        "timestamp": "2025-05-01T00:03:08.189653",
+        "speaker": "system",
+        "text": "Hello and welcome to StayVista! How can I help you today?"
+      },
+      {
+        "timestamp": "2025-05-01T00:03:23.189658",
+        "speaker": "user",
+        "text": "I'm looking for a place in Malibu for next week"
+      },
+      {
+        "timestamp": "2025-05-01T00:03:38.189661",
+        "speaker": "system",
+        "text": "Great! I can help you find a place in Malibu. How many people will be staying?"
+      },
+      {
+        "timestamp": "2025-05-01T00:03:53.189664",
+        "speaker": "user",
+        "text": "Just 2 people"
+      },
+      {
+        "timestamp": "2025-05-01T00:04:08.189666",
+        "speaker": "system",
+        "text": "Perfect. And when would you like to check in and check out?"
+      },
+      {
+        "timestamp": "2025-05-01T00:04:23.189669",
+        "speaker": "user",
+        "text": "Check in on Friday and check out on Monday"
+      },
+      {
+        "timestamp": "2025-05-01T00:04:38.189671",
+        "speaker": "system",
+        "text": "I found 3 properties in Malibu for 2 guests from Friday to Monday. Would you like to hear about them?"
+      }
+    ],
+    "created_at": "2025-05-01T00:13:08.189674",
+    "updated_at": "2025-05-01T00:13:08.189675"
+  }
+]

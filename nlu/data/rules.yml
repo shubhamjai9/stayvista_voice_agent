@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+- rule: Always say goodbye when the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Always respond to out of scope messages
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: Always thank back when user thanks
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- rule: Always respond to bot challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- rule: Always activate search form when searching properties
+  steps:
+  - intent: search_property
+  - action: utter_ask_location
+
+- rule: Always provide property details when asked
+  steps:
+  - intent: ask_property_details
+  - action: action_provide_property_details
+
+- rule: Always provide pricing details when asked
+  steps:
+  - intent: ask_price
+  - action: action_provide_property_details
+
+- rule: Always check availability when asked
+  steps:
+  - intent: ask_availability
+  - action: action_check_availability
+
+- rule: Always provide amenities when asked
+  steps:
+  - intent: ask_amenities
+  - action: action_provide_property_details
+
+- rule: Always explain booking process when asked
+  steps:
+  - intent: book_property
+  - action: utter_ask_location
+
+- rule: Always handle cancellation requests
+  steps:
+  - intent: cancel_booking
+  - action: action_cancel_booking
+
+- rule: Always restart conversation when asked
+  steps:
+  - intent: restart
+  - action: action_reset_booking_form
+  - action: utter_greet 

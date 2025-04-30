@@ -1,0 +1,420 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+    - hey there
+    - greetings
+    - howdy
+    - hi there
+    - hiya
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - see ya
+    - cya
+    - good night
+    - have a nice day
+    - talk to you later
+    - bye bye
+    - that's all thanks
+    - that will be all
+    - end call
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - absolutely
+    - definitely
+    - yeah
+    - yep
+    - sounds good
+    - that's right
+    - that works
+    - ok
+    - okay
+    - sounds perfect
+    - perfect
+    - that's correct
+    - right
+    - that's exactly what I want
+    - I'd like that
+    - confirm
+    - I confirm
+    - proceed
+    - let's do it
+    - let's proceed
+    - go ahead
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - nope
+    - don't like that
+    - no way
+    - not really
+    - I don't think so
+    - I don't want that
+    - no thanks
+    - not interested
+    - that's not right
+    - that's not what I want
+    - that's incorrect
+    - not now
+    - I'll pass
+    - let me think about it
+    - not this time
+    - definitely not
+    - no, that's not correct
+    - no, I meant something else
+    - cancel
+    - stop
+    - wrong
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thanks a lot
+    - great thanks
+    - appreciate it
+    - thank you so much
+    - thanks for the help
+    - that's helpful
+    - you've been very helpful
+    - thank you for your assistance
+    - much appreciated
+    - brilliant, thanks
+    - awesome, thanks
+    - excellent, thank you
+    - cheers
+
+- intent: out_of_scope
+  examples: |
+    - What's the weather today?
+    - Who's the president?
+    - Can you order me a pizza?
+    - What time is it?
+    - Tell me a joke
+    - I want to play a game
+    - Can you sing a song?
+    - How old are you?
+    - What's your name?
+    - Do you like movies?
+    - What's the meaning of life?
+    - Can you help me with my homework?
+    - I need medical advice
+    - What's your favorite color?
+    - Can you drive me to the airport?
+    - I need investment advice
+    - Can you fix my phone?
+    - I want to talk about politics
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what are you?
+    - what is your name?
+    - what should I call you?
+    - are you real?
+    - are you a person?
+    - tell me about yourself
+
+- intent: book_property
+  examples: |
+    - I want to book a place
+    - I'd like to make a reservation
+    - I'd like to book a villa
+    - I need to book a property
+    - Can I book a stay?
+    - How do I book a place?
+    - I want to book a villa in [Bali](location)
+    - I'd like to book a property in [New York](location)
+    - I want to make a reservation in [Miami](location)
+    - I want to book a place for [4](number_of_guests) people
+    - I need a booking for [2](number_of_rooms) bedrooms
+    - Can I book a [villa](property_type) in [Goa](location) for [6](number_of_guests) people?
+    - I'd like to book a stay from [June 10](check_in_date) to [June 15](check_out_date)
+    - I want to book a place with a [pool](amenity)
+    - Book a place for me in [London](location)
+    - Reserve a property in [Barcelona](location) with [WiFi](amenity)
+    - I want to book somewhere with a [hot tub](amenity)
+    - Make a reservation for a [cabin](property_type) with [2](number_of_rooms) bedrooms
+    - I need a place with [sea view](amenity)
+    - Book a [house](property_type) for [8](number_of_guests) people
+
+- intent: search_property
+  examples: |
+    - I'm looking for a place to stay
+    - Show me properties in [Paris](location)
+    - Can you find properties in [Tokyo](location)?
+    - I need a place in [London](location)
+    - Find me a property with [pool](amenity)
+    - I want to see places with [sea view](amenity)
+    - Show me properties for [4](number_of_guests) people
+    - I'm looking for a place with [2](number_of_rooms) bedrooms
+    - Find me a [house](property_type) in [Rome](location)
+    - Search for a [villa](property_type) in [Bali](location)
+    - I'm searching for a place with [WiFi](amenity) and a [pool](amenity)
+    - Show me places available from [July 15](check_in_date) to [July 20](check_out_date)
+    - I need a place in [Miami](location) for [6](number_of_guests) people
+    - Find properties under [$200](price) per night
+    - I want to see options in [New York](location) with [kitchen](amenity)
+    - Show me properties with [air conditioning](amenity)
+    - Are there any places in [Santorini](location) with [private pool](amenity)?
+    - Find me a [cabin](property_type) in the [mountains](location)
+    - I want to see properties near the [beach](location)
+    - Show me places with [parking](amenity)
+
+- intent: provide_location
+  examples: |
+    - [New York](location)
+    - [Paris](location)
+    - [London](location)
+    - [Bali](location)
+    - [Tokyo](location)
+    - [Miami](location)
+    - [Barcelona](location)
+    - [Rome](location)
+    - [Sydney](location)
+    - [Berlin](location)
+    - [San Francisco](location)
+    - [Hong Kong](location)
+    - [Las Vegas](location)
+    - [Amsterdam](location)
+    - [Dubai](location)
+    - [Madrid](location)
+    - [Los Angeles](location)
+    - [Santorini](location)
+    - [Cancun](location)
+    - [Maui](location)
+    - I'd like to stay in [Venice](location)
+    - I want to go to [Maldives](location)
+    - [Chicago](location) would be nice
+    - We're planning to visit [Bangkok](location)
+    - I'm thinking about [Lisbon](location)
+    - We'll be in [Singapore](location)
+    - Let's go with [Melbourne](location)
+
+- intent: provide_dates
+  examples: |
+    - from [June 10](check_in_date) to [June 15](check_out_date)
+    - [July 1](check_in_date) to [July 7](check_out_date)
+    - arriving on [December 24](check_in_date) and leaving on [December 30](check_out_date)
+    - check in on [August 5](check_in_date) and check out on [August 12](check_out_date)
+    - staying from [September 15](check_in_date) until [September 20](check_out_date)
+    - [October 3](check_in_date) through [October 10](check_out_date)
+    - arriving [March 2](check_in_date), departing [March 9](check_out_date)
+    - [May 15](check_in_date) to [May 22](check_out_date)
+    - check in [November 23](check_in_date), check out [November 27](check_out_date)
+    - we'll arrive on [January 5](check_in_date) and leave on [January 10](check_out_date)
+    - from [February 14](check_in_date) to [February 16](check_out_date)
+    - [April 1](check_in_date) until [April 8](check_out_date)
+    - checking in [June 22](check_in_date), checking out [June 29](check_out_date)
+    - I'll arrive on [July 30](check_in_date) and depart on [August 6](check_out_date)
+    - dates are [September 5](check_in_date) to [September 12](check_out_date)
+    - our stay is from [October 20](check_in_date) to [October 25](check_out_date)
+    - arrival on [December 28](check_in_date), departure on [January 3](check_out_date)
+
+- intent: provide_amenities
+  examples: |
+    - I'd like a place with a [pool](amenity)
+    - I need [WiFi](amenity)
+    - Must have [air conditioning](amenity)
+    - I want a [kitchen](amenity)
+    - I need [parking](amenity)
+    - Does it have a [hot tub](amenity)?
+    - I'm looking for a place with a [gym](amenity)
+    - Do any properties have a [sea view](amenity)?
+    - I need a place with [washing machine](amenity)
+    - Is there [free breakfast](amenity)?
+    - I'd like a property with a [balcony](amenity)
+    - We need a [pet friendly](amenity) place
+    - Does it have a [fireplace](amenity)?
+    - I want a place with a [private beach](amenity)
+    - I need [wheelchair accessibility](amenity)
+    - I'm looking for [beachfront](amenity) properties
+    - I want a place with a [terrace](amenity)
+    - I need [baby equipment](amenity)
+    - Is there a [BBQ](amenity) available?
+    - I'd like a place with [outdoor dining](amenity)
+    - We need both [WiFi](amenity) and a [pool](amenity)
+    - Do you have properties with [mountain view](amenity) and a [hot tub](amenity)?
+    - I want [air conditioning](amenity), [WiFi](amenity), and a [kitchen](amenity)
+
+- intent: provide_guests
+  examples: |
+    - [2](number_of_guests) people
+    - [4](number_of_guests) guests
+    - there will be [6](number_of_guests) of us
+    - we are [3](number_of_guests) people
+    - [5](number_of_guests) guests in total
+    - [1](number_of_guests) person
+    - just [2](number_of_guests) of us
+    - we're a group of [8](number_of_guests)
+    - [10](number_of_guests) people in our group
+    - [7](number_of_guests) guests
+    - [4](number_of_guests) adults
+    - [2](number_of_guests) adults and [2](number_of_guests) children
+    - we are [6](number_of_guests) adults in total
+    - I'm traveling with [3](number_of_guests) friends
+    - [5](number_of_guests) people in my family
+    - it's just me, so [1](number_of_guests) person
+    - [9](number_of_guests) people total
+
+- intent: provide_rooms
+  examples: |
+    - [2](number_of_rooms) bedrooms
+    - [3](number_of_rooms) bedrooms
+    - I need [1](number_of_rooms) bedroom
+    - we need [4](number_of_rooms) bedrooms
+    - [5](number_of_rooms) bedrooms please
+    - property with [2](number_of_rooms) bedrooms
+    - I'm looking for a place with [3](number_of_rooms) rooms
+    - do you have properties with [6](number_of_rooms) bedrooms?
+    - we require [2](number_of_rooms) separate bedrooms
+    - [3](number_of_rooms) bedroom villa
+    - [4](number_of_rooms) bedroom house
+    - I'd like [1](number_of_rooms) master bedroom
+    - at least [2](number_of_rooms) bedrooms
+    - I need minimum [3](number_of_rooms) bedrooms
+    - we need [5](number_of_rooms) separate sleeping areas
+    - [2](number_of_rooms) bedrooms minimum
+
+- intent: ask_property_details
+  examples: |
+    - Can you tell me more about this property?
+    - What amenities does this place have?
+    - How many bathrooms are there?
+    - Is there a kitchen?
+    - Does it have a pool?
+    - What's the size of the property?
+    - What's included in the property?
+    - Tell me more about this place
+    - Can I see more details about this villa?
+    - What are the features of this property?
+    - How far is it from the beach?
+    - Is it close to the city center?
+    - Does it have air conditioning?
+    - Is parking available?
+    - Is it pet friendly?
+    - Does it have WiFi?
+    - What floor is the apartment on?
+    - Are linens and towels provided?
+
+- intent: ask_price
+  examples: |
+    - How much does it cost?
+    - What's the price per night?
+    - How much is the total for my stay?
+    - What's the rate?
+    - What's the price including all fees?
+    - Is there a cleaning fee?
+    - Are there any extra charges?
+    - What's the total price?
+    - Is there a discount for longer stays?
+    - What's the weekly rate?
+    - How much is the security deposit?
+    - Is breakfast included in the price?
+    - What's the cancellation policy?
+    - Are there any discounts available?
+    - What's the cost breakdown?
+    - Is there a service fee?
+    - How much is the total with taxes?
+
+- intent: ask_availability
+  examples: |
+    - Is this property available?
+    - Is it available for my dates?
+    - Check availability for July 15 to July 20
+    - Can I book this for next weekend?
+    - Is this place free in December?
+    - Do you have availability in August?
+    - Is this villa available from June 10 to June 15?
+    - Can I book this for Christmas?
+    - Check if it's available for New Year's
+    - Do you have any availability in the summer?
+    - Is this property booked for my dates?
+    - Can I check availability for specific dates?
+    - Is there availability for a week in March?
+    - What dates are available?
+    - Can you check if it's free in September?
+
+- intent: ask_amenities
+  examples: |
+    - Does it have a pool?
+    - Is there WiFi?
+    - Is air conditioning available?
+    - Does it have a kitchen?
+    - Is there parking?
+    - Does the property have a hot tub?
+    - Is there a washing machine?
+    - Does it have a dishwasher?
+    - Is there a balcony?
+    - Does it have a sea view?
+    - Is there a gym?
+    - Does the property have beach access?
+    - Is there a fireplace?
+    - Does it have a garden?
+    - Is there outdoor furniture?
+    - Does it have a BBQ?
+    - Is there a coffee machine?
+    - Does it have cable TV?
+
+- intent: cancel_booking
+  examples: |
+    - I want to cancel my booking
+    - Cancel my reservation
+    - How do I cancel my booking?
+    - I need to cancel my reservation
+    - Can you help me cancel my booking?
+    - I'd like to cancel my stay
+    - Cancel booking [ABC123](booking_id)
+    - I want to cancel my reservation for [June 10](check_in_date)
+    - I need to cancel my booking in [Paris](location)
+    - Please cancel my reservation for next week
+    - I have to cancel due to a change of plans
+    - I'd like to cancel and get a refund
+    - How do I get a refund for my cancelled booking?
+    - What's the cancellation policy?
+    - Will I get charged for cancelling?
+    - I need to know how to cancel my booking
+
+- intent: restart
+  examples: |
+    - start over
+    - restart
+    - begin again
+    - restart conversation
+    - let's start fresh
+    - can we start over?
+    - I want to start again
+    - reset
+    - reset everything
+    - clear all
+    - start from the beginning
+    - let's restart
+    - can we begin again?
+    - I want to reset our conversation
+    - start anew 

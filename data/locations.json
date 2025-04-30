@@ -1,0 +1,57 @@
+[
+  {
+    "id": "fea10c49-86c3-4212-bce6-0bc2431e8aa9",
+    "name": "Malibu",
+    "region": "California",
+    "country": "USA",
+    "latitude": 34.0259,
+    "longitude": -118.7798,
+    "description": "A beach city in Los Angeles County, California",
+    "created_at": "2025-05-01T00:13:08.188268",
+    "updated_at": "2025-05-01T00:13:08.188273"
+  },
+  {
+    "id": "c9b7e5d2-5460-407c-b5d1-33353a695214",
+    "name": "Miami Beach",
+    "region": "Florida",
+    "country": "USA",
+    "latitude": 25.7907,
+    "longitude": -80.13,
+    "description": "A coastal resort city in Miami-Dade County, Florida",
+    "created_at": "2025-05-01T00:13:08.188285",
+    "updated_at": "2025-05-01T00:13:08.188286"
+  },
+  {
+    "id": "8677db85-44f9-49a6-a4db-87ed7711f67c",
+    "name": "Aspen",
+    "region": "Colorado",
+    "country": "USA",
+    "latitude": 39.1911,
+    "longitude": -106.8175,
+    "description": "A ski resort town in the Rocky Mountains",
+    "created_at": "2025-05-01T00:13:08.188295",
+    "updated_at": "2025-05-01T00:13:08.188296"
+  },
+  {
+    "id": "142c0f1b-23bb-4420-9073-fce8a3f8fd15",
+    "name": "Santorini",
+    "region": "Cyclades",
+    "country": "Greece",
+    "latitude": 36.3932,
+    "longitude": 25.4615,
+    "description": "A stunning island in the Aegean Sea",
+    "created_at": "2025-05-01T00:13:08.188304",
+    "updated_at": "2025-05-01T00:13:08.188306"
+  },
+  {
+    "id": "248a17ef-c925-4cd2-bb05-63e0a6e24085",
+    "name": "Bali",
+    "region": "Bali Province",
+    "country": "Indonesia",
+    "latitude": -8.3405,
+    "longitude": 115.092,
+    "description": "A beautiful island known for its beaches and temples",
+    "created_at": "2025-05-01T00:13:08.188314",
+    "updated_at": "2025-05-01T00:13:08.188315"
+  }
+]

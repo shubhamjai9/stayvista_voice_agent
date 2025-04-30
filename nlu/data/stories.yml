@@ -1,0 +1,128 @@
+version: "3.1"
+
+stories:
+- story: greet and goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet and out of scope
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- story: search property
+  steps:
+  - intent: search_property
+  - action: utter_ask_location
+  - intent: provide_location
+  - action: utter_ask_check_in_date
+  - intent: provide_dates
+  - action: utter_ask_guests
+  - intent: provide_guests
+  - action: utter_ask_amenities
+  - intent: provide_amenities
+  - action: action_search_properties
+  - action: utter_ask_more_details
+
+- story: search property with all info
+  steps:
+  - intent: search_property
+  - slot_was_set:
+    - location: "Bali"
+    - check_in_date: "July 10"
+    - check_out_date: "July 15"
+    - number_of_guests: 4
+    - amenities: ["pool", "wifi"]
+  - action: utter_searching
+  - action: action_search_properties
+  - action: utter_ask_more_details
+
+- story: ask property details
+  steps:
+  - intent: ask_property_details
+  - action: action_provide_property_details
+
+- story: ask price
+  steps:
+  - intent: ask_price
+  - action: action_provide_property_details
+
+- story: ask availability
+  steps:
+  - intent: ask_availability
+  - action: action_check_availability
+
+- story: ask amenities
+  steps:
+  - intent: ask_amenities
+  - action: action_provide_property_details
+
+- story: book property
+  steps:
+  - intent: book_property
+  - action: utter_ask_location
+  - intent: provide_location
+  - action: utter_ask_check_in_date
+  - intent: provide_dates
+  - action: utter_ask_guests
+  - intent: provide_guests
+  - action: utter_ask_rooms
+  - intent: provide_rooms
+  - action: utter_ask_amenities
+  - intent: provide_amenities
+  - action: action_search_properties
+  - action: utter_ask_to_book
+  - intent: affirm
+  - action: utter_ask_user_name
+  - intent: provide_location  # Repurposing this intent for the name
+  - action: utter_ask_user_email
+  - intent: provide_location  # Repurposing this intent for the email
+  - action: utter_ask_user_phone
+  - intent: provide_location  # Repurposing this intent for the phone
+  - action: utter_confirm_booking_details
+  - intent: affirm
+  - action: action_book_property
+  - action: utter_booking_successful
+
+- story: book property but deny
+  steps:
+  - intent: book_property
+  - action: utter_ask_location
+  - intent: provide_location
+  - action: utter_ask_check_in_date
+  - intent: provide_dates
+  - action: utter_ask_guests
+  - intent: provide_guests
+  - action: action_search_properties
+  - action: utter_ask_to_book
+  - intent: deny
+  - action: utter_deny
+  - action: action_reset_booking_form
+
+- story: cancel booking
+  steps:
+  - intent: cancel_booking
+  - action: action_cancel_booking
+
+- story: restart conversation
+  steps:
+  - intent: restart
+  - action: action_reset_booking_form
+  - action: utter_greet 

@@ -1,0 +1,229 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - out_of_scope
+  - bot_challenge
+  - book_property
+  - search_property
+  - provide_location
+  - provide_dates
+  - provide_amenities
+  - provide_guests
+  - provide_rooms
+  - ask_property_details
+  - ask_price
+  - ask_availability
+  - ask_amenities
+  - cancel_booking
+  - restart
+
+entities:
+  - location
+  - check_in_date
+  - check_out_date
+  - number_of_guests
+  - number_of_rooms
+  - amenity
+  - price
+  - property_type
+  - booking_id
+
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: location
+  
+  check_in_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: check_in_date
+  
+  check_out_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: check_out_date
+  
+  number_of_guests:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number_of_guests
+  
+  number_of_rooms:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number_of_rooms
+  
+  amenities:
+    type: list
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: amenity
+  
+  max_price:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: price
+  
+  property_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: property_type
+  
+  booking_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: booking_id
+  
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: user_name
+  
+  user_email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: user_email
+  
+  user_phone:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: user_phone
+  
+  requested_amenities:
+    type: list
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: amenity
+
+  search_results:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  selected_property_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+responses:
+  utter_greet:
+  - text: "Hello! Welcome to StayVista booking service. How can I help you today?"
+
+  utter_goodbye:
+  - text: "Thank you for using StayVista. Goodbye and have a great day!"
+
+  utter_thank:
+  - text: "You're welcome! Is there anything else I can help you with?"
+
+  utter_affirm:
+  - text: "Great!"
+
+  utter_deny:
+  - text: "No problem. Is there anything else you'd like to know?"
+
+  utter_ask_location:
+  - text: "Where would you like to stay?"
+
+  utter_ask_check_in_date:
+  - text: "What date would you like to check in?"
+
+  utter_ask_check_out_date:
+  - text: "What date would you like to check out?"
+
+  utter_ask_guests:
+  - text: "How many guests will be staying?"
+
+  utter_ask_rooms:
+  - text: "How many bedrooms do you need?"
+
+  utter_ask_amenities:
+  - text: "Are there any specific amenities you're looking for? For example, pool, WiFi, or kitchen."
+
+  utter_ask_max_price:
+  - text: "What's your maximum budget per night?"
+
+  utter_searching:
+  - text: "I'm searching for properties in {location} from {check_in_date} to {check_out_date} for {number_of_guests} guests."
+
+  utter_no_properties_found:
+  - text: "I'm sorry, I couldn't find any properties matching your criteria. Would you like to try with different dates or location?"
+
+  utter_properties_found:
+  - text: "I found {count} properties matching your criteria. Here are the top options."
+
+  utter_booking_successful:
+  - text: "Great! Your booking is confirmed. Your confirmation code is {booking_id}. You'll receive a confirmation email shortly."
+
+  utter_booking_failed:
+  - text: "I'm sorry, there was an issue with the booking. Please try again later or contact customer service."
+
+  utter_out_of_scope:
+  - text: "I'm sorry, I can't help with that. I can help you book a StayVista property, check availability, or provide information about listings."
+
+  utter_bot_challenge:
+  - text: "I'm a booking assistant for StayVista. I can help you find and book accommodations."
+
+  utter_ask_more_details:
+  - text: "Would you like to know more details about any of these properties?"
+
+  utter_ask_to_book:
+  - text: "Would you like to proceed with booking this property?"
+
+  utter_ask_user_name:
+  - text: "May I have your full name for the booking?"
+
+  utter_ask_user_email:
+  - text: "What email address should I use for the booking confirmation?"
+
+  utter_ask_user_phone:
+  - text: "What's your phone number in case the host needs to contact you?"
+
+  utter_confirm_booking_details:
+  - text: "Just to confirm: You're booking {property_name} in {location} from {check_in_date} to {check_out_date} for {number_of_guests} guests. Is that correct?"
+
+  utter_default:
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
+
+session_config:
+  session_expiration_time: 60  # in minutes
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_search_properties
+  - action_provide_property_details
+  - action_book_property
+  - action_cancel_booking
+  - action_check_availability
+  - action_reset_booking_form 
